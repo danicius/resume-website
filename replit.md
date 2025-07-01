@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a personal portfolio website for Danielle Alvarez, a Computer Science graduate and software developer. The application is built as a full-stack web application with a React frontend and Express backend, designed to showcase professional experience, projects, and technical skills in an elegant, responsive interface.
+This is a personal portfolio website for Danielle Alvarez, a Computer Science graduate and software developer. The application is built as a **static React website** optimized for GitHub Pages deployment, designed to showcase professional experience, projects, and technical skills in an elegant, responsive interface with an orange-blue gradient theme.
 
 ## System Architecture
 
@@ -15,18 +15,12 @@ This is a personal portfolio website for Danielle Alvarez, a Computer Science gr
 - **Build Tool**: Vite for development and production builds
 - **Animation**: Framer Motion for smooth animations and transitions
 
-### Backend Architecture
-- **Framework**: Express.js with TypeScript
-- **Module System**: ES Modules
-- **Development**: tsx for TypeScript execution
-- **Production Build**: esbuild for server bundling
-- **Storage**: In-memory storage with interface for future database integration
-
-### Database Layer
-- **ORM**: Drizzle ORM configured for PostgreSQL
-- **Schema**: Centralized schema definitions in shared directory
-- **Migrations**: Drizzle Kit for database migrations
-- **Connection**: Neon Database serverless PostgreSQL (configured but not actively used)
+### Static Site Architecture
+- **Deployment**: Optimized for GitHub Pages with automatic deployment
+- **Build Tool**: Vite for static site generation
+- **Assets**: Professional headshot and images served statically
+- **Configuration**: Custom Vite config for static builds (`vite.config.static.ts`)
+- **CI/CD**: GitHub Actions workflow for automatic deployment
 
 ## Key Components
 
@@ -110,19 +104,20 @@ This is a personal portfolio website for Danielle Alvarez, a Computer Science gr
 4. Environment variables: DATABASE_URL for database connection
 
 ### Build Commands
-- `npm run dev`: Development mode with hot reload
-- `npm run build`: Production build for frontend and backend
-- `npm run start`: Production server execution
-- `npm run db:push`: Database schema synchronization
+- `npx vite --config vite.config.static.ts`: Development mode with hot reload
+- `npx vite build --config vite.config.static.ts`: Production build for static site
+- `npx vite preview --config vite.config.static.ts`: Preview production build
+- Automatic deployment via GitHub Actions on push to main branch
 
 ### Environment Configuration
-- NODE_ENV for environment detection
-- DATABASE_URL for PostgreSQL connection
-- Development vs production asset serving
-- Replit-specific integrations and banners
+- Static site optimized for GitHub Pages
+- Base path configured for proper asset loading
+- Professional headshot and resume assets included
+- Responsive design across all device sizes
 
 ## Changelog
-- June 30, 2025. Initial setup
+- June 30, 2025. Initial setup with full-stack architecture
+- July 1, 2025. Converted to static site for GitHub Pages deployment, added orange-blue gradient theme and professional headshot
 
 ## User Preferences
 
