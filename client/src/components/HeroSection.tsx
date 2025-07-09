@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import headshotImage from "@assets/UFIT-Headshot-DanielleAlvarez-001 (1)_1751326545500.jpg";
+import headshotImage from "@/assets/daniellepic.jpg"; // Adjust the path as necessary
 
 export default function HeroSection() {
   const scrollToSection = (href: string) => {
